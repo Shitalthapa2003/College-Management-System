@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>College Management System</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    margin:0;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+}
+
+/* Sidebar */
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#2c2c54;
+    position:fixed;
+    padding-top:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+}
+
+.sidebar button{
+    width:90%;
+    margin:10px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#40407a;
+    color:white;
+    cursor:pointer;
+}
+
+.sidebar button:hover{
+    background:#ff793f;
+}
+
+/* Content Area */
+.content{
+    margin-left:240px;
+    padding:30px;
+}
+
+.page{
+    display:none;
+}
+
+.active{
+    display:block;
+}
+
+/* Cards */
+.card{
+    background:white;
+    color:black;
+    padding:20px;
+    border-radius:10px;
+    margin:15px;
+    display:inline-block;
+    width:220px;
+    text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR MENU -->
+<div class="sidebar">
+<h2>🎓 LMS</h2>
+
+<button onclick="showPage('dashboard')">Dashboard</button>
+<button onclick="showPage('students')">Students</button>
+<button onclick="showPage('teachers')">Teachers</button>
+<button onclick="showPage('attendance')">Attendance</button>
+<button onclick="showPage('fees')">Fees</button>
+<button onclick="showPage('courses')">Courses</button>
+<button onclick="showPage('results')">Results</button>
+
+</div>
+
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="page active">
+<h1>Dashboard</h1>
+
+<div class="card">👨‍🎓 Students<br>250</div>
+<div class="card">👩‍🏫 Teachers<br>35</div>
+<div class="card">💰 Fees Collected<br>₹5,00,000</div>
+<div class="card">📚 Courses<br>12</div>
+
+</div>
+
+
+<!-- STUDENTS -->
+<div id="students" class="page">
+<h1>Students Management</h1>
+<div class="card">Rahul Sharma</div>
+<div class="card">Anita Das</div>
+<div class="card">Riya Singh</div>
+<div class="card">Rahul Sharma</div>
+<div class="card">Anita Das</div>
+<div class="card">Riya Singh</div>
+<div class="card">Aman Verma</div>
+<div class="card">Priya Gupta</div>
+<div class="card">Kunal Das</div>
+<div class="card">Sneha Roy</div>
+<div class="card">Arjun Mehta</div>
+<div class="card">Neha Kapoor</div>
+<div class="card">Vikram Singh</div>
+</div>
+
+
+<!-- TEACHERS -->
+<div id="teachers" class="page">
+<h1>Teachers Management</h1>
+<div class="card">Mr Kumar</div>
+<div class="card">Ms Priya</div>
+<div class="card">Dr Sen</div>
+<div class="card">Mr Kumar</div>
+<div class="card">Ms Priya</div>
+<div class="card">Dr Sen</div>
+<div class="card">Prof Sharma</div>
+<div class="card">Dr Anita Paul</div>
+<div class="card">Mr Rajiv Das</div>
+<div class="card">Mrs Kavita Singh</div>
+<div class="card">Dr Manoj Verma</div>
+<div class="card">Prof Neelam Roy</div>
+<div class="card">Mr Arindam Dutta</div>
+</div>
+
+
+<!-- ATTENDANCE -->
+<div id="attendance" class="page">
+<h1>Attendance</h1>
+<div class="card">Present Students: 210</div>
+<div class="card">Absent Students: 40</div>
+</div>
+
+
+<!-- FEES -->
+<div id="fees" class="page">
+<h1>Fees Management</h1>
+<div class="card">Paid: 200 Students</div>
+<div class="card">Pending: 50 Students</div>
+</div>
+
+
+<!-- COURSES -->
+<div id="courses" class="page">
+<h1>Courses</h1>
+<div class="card">B.Tech</div>
+<div class="card">MBA</div>
+<div class="card">BCA</div>
+<div class="card">MCA</div>
+</div>
+
+
+<!-- RESULTS -->
+<div id="results" class="page">
+<h1>Results</h1>
+<div class="card">Average CGPA: 8.2</div>
+<div class="card">Topper: Riya Singh</div>
+<div class="card">Rahul Sharma — CGPA 8.5</div>
+<div class="card">Anita Das — CGPA 9.1</div>
+<div class="card">Riya Singh — CGPA 9.4</div>
+<div class="card">Aman Verma — CGPA 7.9</div>
+<div class="card">Priya Gupta — CGPA 8.7</div>
+<div class="card">Kunal Das — CGPA 8.1</div>
+<div class="card">Sneha Roy — CGPA 9.0</div>
+<div class="card">Arjun Mehta — CGPA 7.8</div>
+<div class="card">Neha Kapoor — CGPA 8.9</div>
+<div class="card">Vikram Singh — CGPA 8.3</div>
+</div>
+
+</div>
+
+
+<script>
+
+function showPage(pageId){
+
+let pages=document.querySelectorAll(".page");
+
+pages.forEach(function(page){
+page.classList.remove("active");
+});
+
+document.getElementById(pageId).classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
